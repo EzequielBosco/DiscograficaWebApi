@@ -1,9 +1,8 @@
-﻿namespace DiscograficaWebApi.DAL.Models
+﻿namespace DiscograficaWebApi.DAL.Models;
+
+public enum Rol
 {
-    public enum Rol
-    {
-        Administrador,
-        Artista,
-        Usuario
-    }
+    Administrador,
+    Artista,
+    Usuario
 }
