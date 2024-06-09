@@ -11,7 +11,7 @@ public class DataContext : DbContext
 
     public DbSet<Artista> Artistas { get; set; }
     public DbSet<Disco> Discos { get; set; }
-    public DbSet<Cancion> Canciones { get; set; }
+    public DbSet<Cancion> Cancions { get; set; }
     public DbSet<Discografica> Discograficas { get; set; }
     public DbSet<Usuario> Usuarios { get; set; }
 }
