@@ -1,9 +1,12 @@
+using DiscograficaWebApi.BLL.Services;
+using DiscograficaWebApi.BLL.Services.Implements;
 using DiscograficaWebApi.DAL;
 using DiscograficaWebApi.DAL.Data;
 using DiscograficaWebApi.DAL.Repository;
 using DiscograficaWebApi.DAL.Repository.Implements;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +16,16 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+//------------------AutoMapper--------------
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
+//------------------Services----------------
+builder.Services.AddScoped<IDiscograficaService, DiscograficaService>();
+builder.Services.AddScoped<IArtistaService, ArtistaService>();
+builder.Services.AddScoped<IDiscoService, DiscoService>();
+builder.Services.AddScoped<ICancionService, CancionService>();
+builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 
 //------------------Repository--------------
 builder.Services.AddScoped<IDiscograficaRepository, DiscograficaRepository>();
