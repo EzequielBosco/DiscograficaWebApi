@@ -1,5 +1,6 @@
 ﻿using DiscograficaWebApi.DAL.Data;
 using DiscograficaWebApi.DAL.Models;
+using DiscograficaWebApi.DTOs.Disco;
 using Microsoft.EntityFrameworkCore;
 
 namespace DiscograficaWebApi.DAL.Repository.Implements;
@@ -43,5 +44,63 @@ public class DiscoRepository : Repository<Disco>, IDiscoRepository
         var result = await _context.Discos.Where(d => d.UnidadesVendidas == unidades).ToListAsync();
 
         return result;
+    }
+
+    public async Task<List<Disco>> GetTop5MasVendidos()
+    {
+        var result = await _context.Discos.OrderByDescending(d => d.UnidadesVendidas)
+            .Take(5)
+            .Include(d => d.Artista)
+            .Include(d => d.Cancions)
+            .ToListAsync();
+
+        return result;
+    }
+
+    public async Task<List<Disco>> GetByFilter(DiscoFilterRequestDto request)
+    {
+        var query = _context.Discos.Include(d => d.Artista).Include(d => d.Cancions).AsQueryable();
+
+        if (request.GeneroMusical.HasValue)
+        {
+            query = query.Where(d => d.GeneroMusical == request.GeneroMusical.Value);
+        }
+
+        if (!string.IsNullOrEmpty(request.Nombre))
+        {
+            query = query.Where(d => d.Nombre.Contains(request.Nombre));
+        }
+
+        if (request.UnidadesVendidas.HasValue)
+        {
+            query = query.Where(d => d.UnidadesVendidas >= request.UnidadesVendidas.Value);
+        }
+
+        if (request.Artista != null)
+        {
+            if (!string.IsNullOrEmpty(request.Artista.Nombre))
+            {
+                query = query.Where(d => d.Artista.NombreArtistico.Contains(request.Artista.Nombre));
+            }
+        }
+
+        return await query.ToListAsync();
+    }
+
+    public async Task<Disco> Update(Disco disco)
+    {
+        var existingDisco = await _context.Discos.FirstOrDefaultAsync(d => d.SKU == disco.SKU);
+        if (existingDisco != null)
+        {
+            existingDisco.Nombre = disco.Nombre;
+            existingDisco.GeneroMusical = disco.GeneroMusical;
+            existingDisco.FechaLanzamiento = disco.FechaLanzamiento;
+            existingDisco.UnidadesVendidas = disco.UnidadesVendidas;
+            existingDisco.ArtistaId = disco.ArtistaId;
+
+            _context.Discos.Update(existingDisco);
+            await _context.SaveChangesAsync();
+        }
+        return existingDisco;
     }
 }

@@ -9,6 +9,8 @@ public class Cancion : EntidadBase
     public GeneroMusical GeneroMusical { get; set; }
     [Required]
     public int Duracion { get; set; }
+    [Required]
+    public DateTime FechaLanzamiento { get; set; }
 
     [ForeignKey(nameof(Disco))]
     public long? DiscoId { get; set; }

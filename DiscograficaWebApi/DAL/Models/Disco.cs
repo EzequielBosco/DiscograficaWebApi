@@ -15,6 +15,7 @@ public class Disco : EntidadBase
     [MaxLength(50)]
     public string SKU { get; set; }
 
+    [Required]
     [ForeignKey(nameof(Artista))]
     public long ArtistaId { get; set; }
     public Artista Artista { get; set; }
