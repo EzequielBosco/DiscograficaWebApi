@@ -6,6 +6,7 @@ public interface ICancionService
 {
     Task<CancionResponseDto> Create(CancionCreateRequestDto request);
     Task<List<CancionResponseDto>> GetAll();
-    Task<CancionResponseDto> GetById(int id);
+    Task<CancionResponseDto> GetById(long id);
     Task<List<CancionFilterResponseDto>> GetByFilter(CancionFilterRequestDto request);
+    Task<CancionResponseDto> Update(long id, CancionUpdateRequestDto request);
 }

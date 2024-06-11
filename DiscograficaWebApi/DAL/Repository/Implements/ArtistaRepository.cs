@@ -16,4 +16,11 @@ public class ArtistaRepository : Repository<Artista>, IArtistaRepository
 
         return result;
     }
+
+    public async Task<Artista> GetById(long id)
+    {
+        var result = await _context.Artistas.FirstOrDefaultAsync(a => a.Id == id);
+
+        return result;
+    }
 }

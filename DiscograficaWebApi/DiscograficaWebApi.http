@@ -1,6 +1,0 @@
-@DiscograficaWebApi_HostAddress = http://localhost:5149
-
-GET {{DiscograficaWebApi_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

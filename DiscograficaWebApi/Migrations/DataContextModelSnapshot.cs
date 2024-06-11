@@ -102,6 +102,9 @@ namespace DiscograficaWebApi.Migrations
                     b.Property<int>("Duracion")
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("FechaLanzamiento")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("GeneroMusical")
                         .HasColumnType("int");
 

@@ -71,7 +71,7 @@ public class CancionService : ICancionService
         }
     }
 
-    public async Task<CancionResponseDto> GetById(int id)
+    public async Task<CancionResponseDto> GetById(long id)
     {
         try
         {
@@ -117,6 +117,41 @@ public class CancionService : ICancionService
         catch (Exception ex)
         {
             _logger.LogError(ex, "Error al obtener las canciones por filtro");
+            throw new Exception(ex.Message);
+        }
+    }
+
+    public async Task<CancionResponseDto> Update(long id, CancionUpdateRequestDto request)
+    {
+        try
+        {
+            _logger.LogInformation($"Se inicia el método Update Cancion con Id: {id}");
+
+            var cancion = await _unitOfWork.CancionRepository.GetById(id);
+            if (cancion == null)
+            {
+                _logger.LogWarning($"No se encontró la canción con Id: {id}");
+                throw new Exception("No se encontró la canción");
+            }
+
+            _mapper.Map(request, cancion);
+            _unitOfWork.CancionRepository.Edit(cancion);
+
+            var result = await _unitOfWork.Save();
+            if (result == 0)
+            {
+                _logger.LogError("Error al actualizar la canción");
+                throw new Exception("No se pudo actualizar la canción");
+            }
+
+            var cancionResponse = _mapper.Map<CancionResponseDto>(cancion);
+
+            _logger.LogInformation($"Canción actualizada con éxito. Id: {cancion.Id}");
+            return cancionResponse;
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, $"Error al actualizar la canción con Id: {id}");
             throw new Exception(ex.Message);
         }
     }

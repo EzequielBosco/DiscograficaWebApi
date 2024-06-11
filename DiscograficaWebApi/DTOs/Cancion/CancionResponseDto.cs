@@ -1,5 +1,4 @@
 ﻿using DiscograficaWebApi.DAL.Models;
-using DiscograficaWebApi.DTOs.Disco;
 using DiscograficaWebApi.DTOs.Artista;
 
 namespace DiscograficaWebApi.DTOs.Cancion;
@@ -10,6 +9,6 @@ public class CancionResponseDto
     public GeneroMusical GeneroMusical { get; set; }
     public int Duracion { get; set; }
     public DateTime FechaLanzamiento { get; set; }
-    public DiscoResponseDto? Disco { get; set; }
+    public string? Disco { get; set; }
     public ArtistaResponseDto Artista { get; set; }
 }

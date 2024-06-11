@@ -25,6 +25,13 @@ public class DiscoService : IDiscoService
         {
             _logger.LogInformation("Se inicia el metodo de Create Disco");
 
+            var artista = await _unitOfWork.ArtistaRepository.GetById(request.ArtistaId);
+            if (artista == null)
+            {
+                _logger.LogWarning($"No se encontró el artista con Id: {request.ArtistaId}");
+                throw new Exception($"No se encontró el artista con Id: {request.ArtistaId}");
+            }
+
             var disco = _mapper.Map<Disco>(request);
             await _unitOfWork.DiscoRepository.Add(disco);
 
@@ -54,6 +61,31 @@ public class DiscoService : IDiscoService
             _logger.LogInformation("Se inicia el metodo de GetAll Discos");
 
             var discos = await _unitOfWork.DiscoRepository.GetAll();
+            if (discos.Count == 0)
+            {
+                _logger.LogWarning("No se encontraron discos");
+                throw new Exception("No hay discos");
+            }
+
+            var discosResponse = _mapper.Map<List<DiscoResponseDto>>(discos);
+
+            _logger.LogInformation("Discos obtenidos con éxito");
+            return discosResponse;
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError("Error al obtener los discos");
+            throw new Exception(ex.Message);
+        }
+    }
+
+    public async Task<List<DiscoResponseDto>> GetAllWithCanciones()
+    {
+        try
+        {
+            _logger.LogInformation("Se inicia el metodo de GetAll Discos");
+
+            var discos = await _unitOfWork.DiscoRepository.GetAllWithCanciones();
             if (discos.Count == 0)
             {
                 _logger.LogWarning("No se encontraron discos");
@@ -161,9 +193,16 @@ public class DiscoService : IDiscoService
                 throw new Exception("El disco no existe");
             }
 
+            var artista = await _unitOfWork.ArtistaRepository.GetById(request.ArtistaId);
+            if (artista == null)
+            {
+                _logger.LogError($"Error, el artista con id: {request.ArtistaId} no existe");
+                throw new Exception("El artista no existe");
+            }
+
             _mapper.Map(request, disco);
 
-            await _unitOfWork.DiscoRepository.Update(disco);
+            _unitOfWork.DiscoRepository.Edit(disco);
             var result = await _unitOfWork.Save();
             if (result == 0)
             {

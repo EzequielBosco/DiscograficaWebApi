@@ -8,5 +8,5 @@ public class CancionFilterRequestDto
     public string? Nombre { get; set; }
     public int? Duracion { get; set; }
     public GeneroMusical? GeneroMusical { get; set; }
-    public ArtistaResponseDto? Artista { get; set; }
+    public string? Artista { get; set; }
 }

@@ -16,7 +16,10 @@ public class AutomapperProfile : Profile
         // Artista
         CreateMap<Artista, ArtistaResponseDto>()
             .ForMember(dest => dest.FechaNacimiento,
-                    opt => opt.MapFrom(src => FormatearFechaUtils.FormatearFecha(src.FechaNacimiento)));
+                    opt => opt.MapFrom(src => FormatearFechaUtils.FormatearFecha(src.FechaNacimiento)))
+            .ForMember(dest => dest.Discografica, opt => opt.MapFrom(src => src.Discografica))
+            .ForMember(dest => dest.GeneroMusical, opt => opt.MapFrom(src => src.GeneroMusical))
+            .ForMember(dest => dest.Discografica, opt => opt.MapFrom(src => src.Discografica));
         CreateMap<ArtistaCreateRequestDto, Artista>();
         // Discografica
         CreateMap<Discografica, DiscograficaResponseDto>()
@@ -26,7 +29,10 @@ public class AutomapperProfile : Profile
         // Disco
         CreateMap<Disco, DiscoResponseDto>()
             .ForMember(dest => dest.FechaLanzamiento,
-                    opt => opt.MapFrom(src => FormatearFechaUtils.FormatearFecha(src.FechaLanzamiento)));
+                    opt => opt.MapFrom(src => FormatearFechaUtils.FormatearFecha(src.FechaLanzamiento)))
+            .ForMember(dest => dest.GeneroMusical, opt => opt.MapFrom(src => src.GeneroMusical))
+            .ForMember(dest => dest.Artista, opt => opt.MapFrom(src => src.Artista))
+            .ForMember(dest => dest.Cancions, opt => opt.MapFrom(src => src.Cancions));
         CreateMap<DiscoCreateRequestDto, Disco>();
         CreateMap<DiscoUpdateRequestDto, Disco>();
         CreateMap<DiscoFilterRequestDto, Disco>();
@@ -34,16 +40,22 @@ public class AutomapperProfile : Profile
             .ForMember(dest => dest.CantidadCanciones,
                     opt => opt.MapFrom(src => src.Cancions.Count))
             .ForMember(dest => dest.FechaLanzamiento,
-                    opt => opt.MapFrom(src => FormatearFechaUtils.FormatearFecha(src.FechaLanzamiento)));
+                    opt => opt.MapFrom(src => FormatearFechaUtils.FormatearFecha(src.FechaLanzamiento)))
+            .ForMember(dest => dest.GeneroMusical, opt => opt.MapFrom(src => src.GeneroMusical))
+            .ForMember(dest => dest.Artista, opt => opt.MapFrom(src => src.Artista));
         // Cancion
         CreateMap<Cancion, CancionResponseDto>()
             .ForMember(dest => dest.FechaLanzamiento,
-                    opt => opt.MapFrom(src => FormatearFechaUtils.FormatearFecha(src.FechaLanzamiento)));
+                    opt => opt.MapFrom(src => FormatearFechaUtils.FormatearFecha(src.FechaLanzamiento)))
+            .ForMember(dest => dest.GeneroMusical, opt => opt.MapFrom(src => src.GeneroMusical));
         CreateMap<CancionCreateRequestDto, Cancion>();
         CreateMap<CancionFilterRequestDto, Cancion>();
+        CreateMap<CancionUpdateRequestDto, Cancion>();
         CreateMap<Cancion, CancionFilterResponseDto>()
             .ForMember(dest => dest.FechaLanzamiento,
-                    opt => opt.MapFrom(src => FormatearFechaUtils.FormatearFecha(src.FechaLanzamiento)));
+                    opt => opt.MapFrom(src => FormatearFechaUtils.FormatearFecha(src.FechaLanzamiento)))
+            .ForMember(dest => dest.GeneroMusical, opt => opt.MapFrom(src => src.GeneroMusical))
+            .ForMember(dest => dest.Artista, opt => opt.MapFrom(src => src.Artista));
         // Usuario
         CreateMap<Usuario, UsuarioResponseDto>();
         CreateMap<UsuarioCreateRequestDto, Usuario>();

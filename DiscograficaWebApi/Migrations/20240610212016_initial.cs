@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace DiscograficaWebApi.Migrations
 {
     /// <inheritdoc />
-    public partial class Inicio : Migration
+    public partial class initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -120,6 +120,7 @@ namespace DiscograficaWebApi.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     GeneroMusical = table.Column<int>(type: "int", nullable: false),
                     Duracion = table.Column<int>(type: "int", nullable: false),
+                    FechaLanzamiento = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DiscoId = table.Column<long>(type: "bigint", nullable: true),
                     ArtistaId = table.Column<long>(type: "bigint", nullable: false),
                     Nombre = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),

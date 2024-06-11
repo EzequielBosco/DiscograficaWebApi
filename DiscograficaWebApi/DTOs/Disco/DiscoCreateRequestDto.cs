@@ -11,5 +11,4 @@ public class DiscoCreateRequestDto
     public int UnidadesVendidas { get; set; } = 0;
     public string SKU { get; set; }
     public long ArtistaId { get; set; }
-    public List<CancionResponseDto> Cancions { get; set; }
 }

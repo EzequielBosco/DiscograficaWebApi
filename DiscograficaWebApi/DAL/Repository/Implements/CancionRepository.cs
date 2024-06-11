@@ -48,16 +48,16 @@ public class CancionRepository : Repository<Cancion>, ICancionRepository
 
     public async Task<List<Cancion>> GetByFilter(CancionFilterRequestDto request)
     {
-        var query = _context.Cancions.AsQueryable();
+        var query = _context.Cancions.Include(c => c.Artista).AsQueryable();
 
         if (!string.IsNullOrEmpty(request.Nombre))
         {
             query = query.Where(c => c.Nombre.Contains(request.Nombre));
         }
 
-        if (request.Duracion != 0)
+        if (request.Duracion.HasValue)
         {
-            query = query.Where(c => c.Duracion == request.Duracion);
+            query = query.Where(c => c.Duracion == request.Duracion.Value);
         }
 
         if (request.GeneroMusical.HasValue)
@@ -65,9 +65,9 @@ public class CancionRepository : Repository<Cancion>, ICancionRepository
             query = query.Where(c => c.GeneroMusical == request.GeneroMusical.Value);
         }
 
-        if (request.Artista != null && !string.IsNullOrEmpty(request.Artista.NombreArtistico))
+        if (!string.IsNullOrEmpty(request.Artista))
         {
-            query = query.Where(c => c.Artista.NombreArtistico.Contains(request.Artista.NombreArtistico));
+            query = query.Where(c => c.Artista.NombreArtistico.Contains(request.Artista));
         }
 
         return await query.ToListAsync();

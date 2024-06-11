@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DiscograficaWebApi.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240609224723_Inicio")]
-    partial class Inicio
+    [Migration("20240610212016_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -104,6 +104,9 @@ namespace DiscograficaWebApi.Migrations
 
                     b.Property<int>("Duracion")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("FechaLanzamiento")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("GeneroMusical")
                         .HasColumnType("int");

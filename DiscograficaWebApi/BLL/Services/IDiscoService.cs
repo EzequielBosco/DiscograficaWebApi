@@ -6,6 +6,7 @@ public interface IDiscoService
 {
     Task<DiscoResponseDto> Create(DiscoCreateRequestDto request);
     Task<List<DiscoResponseDto>> GetAll();
+    Task<List<DiscoResponseDto>> GetAllWithCanciones();
     Task<DiscoResponseDto> GetById(int id);
     Task<List<DiscoFilterResponseDto>> GetByMasVendidos();
     Task<List<DiscoFilterResponseDto>> GetByFilter(DiscoFilterRequestDto request);

@@ -1,0 +1,174 @@
+2024-06-11 01:24:23.825 -03:00 [ERR] Error al obtener los discos
+2024-06-11 01:24:24.471 -03:00 [ERR] Error al obtener los discos
+System.Exception: Error mapping types.
+
+Mapping types:
+List`1 -> List`1
+System.Collections.Generic.List`1[[DiscograficaWebApi.DAL.Models.Disco, DiscograficaWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.List`1[[DiscograficaWebApi.DTOs.Disco.DiscoResponseDto, DiscograficaWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+   at DiscograficaWebApi.BLL.Services.Implements.DiscoService.GetAllWithCanciones() in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\BLL\Services\Implements\DiscoService.cs:line 103
+   at DiscograficaWebApi.Controllers.DiscosController.GetAllWithCanciones() in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\Controllers\DiscosController.cs:line 53
+2024-06-11 01:35:40.668 -03:00 [WRN] No se encontraron canciones con los criterios de búsqueda proporcionados
+2024-06-11 01:35:40.698 -03:00 [ERR] Error al obtener las canciones por filtro
+System.Exception: No se encontraron canciones
+   at DiscograficaWebApi.BLL.Services.Implements.CancionService.GetByFilter(CancionFilterRequestDto request) in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\BLL\Services\Implements\CancionService.cs:line 109
+2024-06-11 01:35:40.730 -03:00 [ERR] Error al obtener las canciones
+System.Exception: No se encontraron canciones
+   at DiscograficaWebApi.BLL.Services.Implements.CancionService.GetByFilter(CancionFilterRequestDto request) in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\BLL\Services\Implements\CancionService.cs:line 120
+   at DiscograficaWebApi.Controllers.CancionsController.GetByFilter(CancionFilterRequestDto request) in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\Controllers\CancionsController.cs:line 51
+2024-06-11 01:38:38.465 -03:00 [WRN] No se encontraron canciones con los criterios de búsqueda proporcionados
+2024-06-11 01:38:38.507 -03:00 [ERR] Error al obtener las canciones por filtro
+System.Exception: No se encontraron canciones
+   at DiscograficaWebApi.BLL.Services.Implements.CancionService.GetByFilter(CancionFilterRequestDto request) in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\BLL\Services\Implements\CancionService.cs:line 109
+2024-06-11 01:38:38.539 -03:00 [ERR] Error al obtener las canciones
+System.Exception: No se encontraron canciones
+   at DiscograficaWebApi.BLL.Services.Implements.CancionService.GetByFilter(CancionFilterRequestDto request) in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\BLL\Services\Implements\CancionService.cs:line 120
+   at DiscograficaWebApi.Controllers.CancionsController.GetByFilter(CancionFilterRequestDto request) in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\Controllers\CancionsController.cs:line 51
+2024-06-11 01:41:36.812 -03:00 [WRN] No se encontraron canciones con los criterios de búsqueda proporcionados
+2024-06-11 01:41:47.887 -03:00 [ERR] Error al obtener las canciones por filtro
+System.Exception: No se encontraron canciones
+   at DiscograficaWebApi.BLL.Services.Implements.CancionService.GetByFilter(CancionFilterRequestDto request) in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\BLL\Services\Implements\CancionService.cs:line 109
+2024-06-11 01:41:48.399 -03:00 [ERR] Error al obtener las canciones
+System.Exception: No se encontraron canciones
+   at DiscograficaWebApi.BLL.Services.Implements.CancionService.GetByFilter(CancionFilterRequestDto request) in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\BLL\Services\Implements\CancionService.cs:line 120
+   at DiscograficaWebApi.Controllers.CancionsController.GetByFilter(CancionFilterRequestDto request) in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\Controllers\CancionsController.cs:line 51
+2024-06-11 01:46:08.927 -03:00 [WRN] No se encontraron canciones con los criterios de búsqueda proporcionados
+2024-06-11 01:46:10.933 -03:00 [ERR] Error al obtener las canciones por filtro
+System.Exception: No se encontraron canciones
+   at DiscograficaWebApi.BLL.Services.Implements.CancionService.GetByFilter(CancionFilterRequestDto request)
+2024-06-11 01:46:11.250 -03:00 [ERR] Error al obtener las canciones
+System.Exception: No se encontraron canciones
+   at DiscograficaWebApi.BLL.Services.Implements.CancionService.GetByFilter(CancionFilterRequestDto request)
+   at DiscograficaWebApi.Controllers.CancionsController.GetByFilter(CancionFilterRequestDto request)
+2024-06-11 02:25:20.026 -03:00 [ERR] Error al obtener las canciones por filtro
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+List`1 -> List`1
+System.Collections.Generic.List`1[[DiscograficaWebApi.DAL.Models.Cancion, DiscograficaWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.List`1[[DiscograficaWebApi.DTOs.Cancion.CancionFilterResponseDto, DiscograficaWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+ ---> AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Cancion -> CancionFilterResponseDto
+DiscograficaWebApi.DAL.Models.Cancion -> DiscograficaWebApi.DTOs.Cancion.CancionFilterResponseDto
+
+Type Map configuration:
+Cancion -> CancionFilterResponseDto
+DiscograficaWebApi.DAL.Models.Cancion -> DiscograficaWebApi.DTOs.Cancion.CancionFilterResponseDto
+
+Destination Member:
+Artista
+
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+String -> ArtistaResponseDto
+System.String -> DiscograficaWebApi.DTOs.Artista.ArtistaResponseDto
+
+Destination Member:
+Artista
+
+   at lambda_method157(Closure, String, ArtistaResponseDto, ResolutionContext)
+   at lambda_method156(Closure, Object, List`1, ResolutionContext)
+   --- End of inner exception stack trace ---
+   at lambda_method156(Closure, Object, List`1, ResolutionContext)
+   --- End of inner exception stack trace ---
+   at lambda_method156(Closure, Object, List`1, ResolutionContext)
+   at DiscograficaWebApi.BLL.Services.Implements.CancionService.GetByFilter(CancionFilterRequestDto request) in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\BLL\Services\Implements\CancionService.cs:line 112
+2024-06-11 02:25:20.579 -03:00 [ERR] Error al obtener las canciones
+System.Exception: Error mapping types.
+
+Mapping types:
+List`1 -> List`1
+System.Collections.Generic.List`1[[DiscograficaWebApi.DAL.Models.Cancion, DiscograficaWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.List`1[[DiscograficaWebApi.DTOs.Cancion.CancionFilterResponseDto, DiscograficaWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+   at DiscograficaWebApi.BLL.Services.Implements.CancionService.GetByFilter(CancionFilterRequestDto request) in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\BLL\Services\Implements\CancionService.cs:line 120
+   at DiscograficaWebApi.Controllers.CancionsController.GetByFilter(CancionFilterRequestDto request) in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\Controllers\CancionsController.cs:line 51
+2024-06-11 03:09:43.038 -03:00 [ERR] An exception occurred in the database while saving changes for context type 'DiscograficaWebApi.DAL.Data.DataContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_Cancions_Discos_DiscoId". The conflict occurred in database "DiscograficaParcial2", table "dbo.Discos", column 'Id'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:493a51af-1825-48a8-b81c-ba224d27d1a7
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_Cancions_Discos_DiscoId". The conflict occurred in database "DiscograficaParcial2", table "dbo.Discos", column 'Id'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:493a51af-1825-48a8-b81c-ba224d27d1a7
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-06-11 03:10:50.359 -03:00 [ERR] Error al actualizar la canción con Id: 4
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_Cancions_Discos_DiscoId". The conflict occurred in database "DiscograficaParcial2", table "dbo.Discos", column 'Id'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:493a51af-1825-48a8-b81c-ba224d27d1a7
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at DiscograficaWebApi.DAL.UnitOfWork.Save() in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\DAL\UnitOfWork.cs:line 27
+   at DiscograficaWebApi.BLL.Services.Implements.CancionService.Update(Int64 id, CancionUpdateRequestDto request) in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\BLL\Services\Implements\CancionService.cs:line 140
+2024-06-11 03:10:51.074 -03:00 [ERR] Error al actualizar la canción
+System.Exception: An error occurred while saving the entity changes. See the inner exception for details.
+   at DiscograficaWebApi.BLL.Services.Implements.CancionService.Update(Int64 id, CancionUpdateRequestDto request) in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\BLL\Services\Implements\CancionService.cs:line 155
+   at DiscograficaWebApi.Controllers.CancionsController.Update(Int64 id, CancionUpdateRequestDto request) in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\Controllers\CancionsController.cs:line 92

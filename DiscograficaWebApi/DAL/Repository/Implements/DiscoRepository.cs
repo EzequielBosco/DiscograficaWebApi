@@ -11,6 +11,13 @@ public class DiscoRepository : Repository<Disco>, IDiscoRepository
     {
     }
 
+    public async Task<List<Disco>> GetAllWithCanciones()
+    {
+        var result = await _context.Discos.Include(d => d.Artista).Include(d => d.Cancions).ToListAsync();
+
+        return result;
+    }
+
     public async Task<Disco> GetByNombre(string nombre)
     {
         var result = await _context.Discos.FirstOrDefaultAsync(d => d.Nombre == nombre);
@@ -78,29 +85,12 @@ public class DiscoRepository : Repository<Disco>, IDiscoRepository
 
         if (request.Artista != null)
         {
-            if (!string.IsNullOrEmpty(request.Artista.Nombre))
+            if (!string.IsNullOrEmpty(request.Artista))
             {
-                query = query.Where(d => d.Artista.NombreArtistico.Contains(request.Artista.Nombre));
+                query = query.Where(d => d.Artista.NombreArtistico.Contains(request.Artista));
             }
         }
 
         return await query.ToListAsync();
-    }
-
-    public async Task<Disco> Update(Disco disco)
-    {
-        var existingDisco = await _context.Discos.FirstOrDefaultAsync(d => d.SKU == disco.SKU);
-        if (existingDisco != null)
-        {
-            existingDisco.Nombre = disco.Nombre;
-            existingDisco.GeneroMusical = disco.GeneroMusical;
-            existingDisco.FechaLanzamiento = disco.FechaLanzamiento;
-            existingDisco.UnidadesVendidas = disco.UnidadesVendidas;
-            existingDisco.ArtistaId = disco.ArtistaId;
-
-            _context.Discos.Update(existingDisco);
-            await _context.SaveChangesAsync();
-        }
-        return existingDisco;
     }
 }
