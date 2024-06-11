@@ -6,5 +6,6 @@ namespace DiscograficaWebApi.BLL.Services
     {
         Task<UsuarioResponseDto> Create(UsuarioCreateRequestDto request);
         Task<UsuarioResponseDto> GetUsuarioByUserName(string username);
+        Task<UsuarioResponseDto> Login(UsuarioLoginRequestDto request);
     }
 }

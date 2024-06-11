@@ -2,6 +2,7 @@
 using DiscograficaWebApi.BLL.Services;
 using DiscograficaWebApi.DAL.Models;
 using DiscograficaWebApi.DTOs.Disco;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -135,6 +136,7 @@ namespace DiscograficaWebApi.Controllers
             }
         }
 
+        [Authorize]
         [HttpPost("Create")]
         public async Task<ActionResult<DiscoResponseDto>> Create(DiscoCreateRequestDto request)
         {
@@ -158,6 +160,7 @@ namespace DiscograficaWebApi.Controllers
             }
         }
 
+        [Authorize]
         [HttpPut("Update/{SKU}")]
         public async Task<ActionResult<DiscoResponseDto>> Update(string SKU, DiscoUpdateRequestDto request)
         {

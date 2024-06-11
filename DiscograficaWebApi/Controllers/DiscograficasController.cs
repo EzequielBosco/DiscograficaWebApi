@@ -1,5 +1,6 @@
 ﻿using DiscograficaWebApi.BLL.Services;
 using DiscograficaWebApi.DTOs.Discografica;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DiscograficaWebApi.Controllers
@@ -17,6 +18,7 @@ namespace DiscograficaWebApi.Controllers
             _discograficaService = discograficaService;
         }
 
+        [Authorize]
         [HttpPost("Create")]
         public async Task<ActionResult<DiscograficaResponseDto>> Create(DiscograficaCreateRequestDto request)
         {

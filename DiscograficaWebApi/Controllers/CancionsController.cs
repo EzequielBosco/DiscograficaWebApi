@@ -1,5 +1,6 @@
 ﻿using DiscograficaWebApi.BLL.Services;
 using DiscograficaWebApi.DTOs.Cancion;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -64,6 +65,7 @@ namespace DiscograficaWebApi.Controllers
             }
         }
 
+        [Authorize]
         [HttpPost("Create")]
         public async Task<ActionResult<CancionResponseDto>> Create([FromBody] CancionCreateRequestDto request)
         {
@@ -82,6 +84,7 @@ namespace DiscograficaWebApi.Controllers
             }
         }
 
+        [Authorize]
         [HttpPut("Update/{id}")]
         public async Task<ActionResult<CancionResponseDto>> Update(long id, CancionUpdateRequestDto request)
         {

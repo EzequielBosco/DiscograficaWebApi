@@ -172,3 +172,41 @@ Error Number:547,State:0,Class:16
 System.Exception: An error occurred while saving the entity changes. See the inner exception for details.
    at DiscograficaWebApi.BLL.Services.Implements.CancionService.Update(Int64 id, CancionUpdateRequestDto request) in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\BLL\Services\Implements\CancionService.cs:line 155
    at DiscograficaWebApi.Controllers.CancionsController.Update(Int64 id, CancionUpdateRequestDto request) in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\Controllers\CancionsController.cs:line 92
+2024-06-11 04:03:21.284 -03:00 [WRN] El nombre de usuario ya existe
+2024-06-11 04:03:21.326 -03:00 [ERR] Error al crear usuario
+System.Exception: El nombre de usuario ya existe
+   at DiscograficaWebApi.BLL.Services.Implements.UsuarioService.Create(UsuarioCreateRequestDto request) in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\BLL\Services\Implements\UsuarioService.cs:line 37
+2024-06-11 04:03:21.363 -03:00 [ERR] Error al crear el usuario
+System.Exception: El nombre de usuario ya existe
+   at DiscograficaWebApi.BLL.Services.Implements.UsuarioService.Create(UsuarioCreateRequestDto request) in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\BLL\Services\Implements\UsuarioService.cs:line 58
+   at DiscograficaWebApi.Controllers.UsuariosController.Create(UsuarioCreateRequestDto usuarioRequestDto) in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\Controllers\UsuariosController.cs:line 30
+2024-06-11 04:11:12.485 -03:00 [ERR] Ya existe un artista con el nombre artístico: string
+2024-06-11 04:11:12.518 -03:00 [ERR] Error al crear artista
+System.Exception: El artista ya existe
+   at DiscograficaWebApi.BLL.Services.Implements.ArtistaService.Create(ArtistaCreateRequestDto request) in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\BLL\Services\Implements\ArtistaService.cs:line 31
+2024-06-11 04:11:12.553 -03:00 [ERR] Error al crear el artista
+System.Exception: El artista ya existe
+   at DiscograficaWebApi.BLL.Services.Implements.ArtistaService.Create(ArtistaCreateRequestDto request) in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\BLL\Services\Implements\ArtistaService.cs:line 52
+   at DiscograficaWebApi.Controllers.ArtistasController.Create(ArtistaCreateRequestDto artistaRequestDto) in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\Controllers\ArtistasController.cs:line 29
+2024-06-11 04:11:48.891 -03:00 [ERR] Ya existe un artista con el nombre artístico: string
+2024-06-11 04:11:48.905 -03:00 [ERR] Error al crear artista
+System.Exception: El artista ya existe
+   at DiscograficaWebApi.BLL.Services.Implements.ArtistaService.Create(ArtistaCreateRequestDto request) in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\BLL\Services\Implements\ArtistaService.cs:line 31
+2024-06-11 04:11:48.935 -03:00 [ERR] Error al crear el artista
+System.Exception: El artista ya existe
+   at DiscograficaWebApi.BLL.Services.Implements.ArtistaService.Create(ArtistaCreateRequestDto request) in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\BLL\Services\Implements\ArtistaService.cs:line 52
+   at DiscograficaWebApi.Controllers.ArtistasController.Create(ArtistaCreateRequestDto artistaRequestDto) in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\Controllers\ArtistasController.cs:line 29
+2024-06-11 04:17:46.062 -03:00 [WRN] Contraseña incorrecta
+2024-06-11 04:17:46.106 -03:00 [ERR] Error al loguear usuario
+System.Exception: Contraseña incorrecta
+   at DiscograficaWebApi.BLL.Services.Implements.UsuarioService.Login(UsuarioLoginRequestDto request) in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\BLL\Services\Implements\UsuarioService.cs:line 78
+2024-06-11 04:17:46.140 -03:00 [ERR] Error al loguear el usuario
+System.Exception: Contraseña incorrecta
+   at DiscograficaWebApi.BLL.Services.Implements.UsuarioService.Login(UsuarioLoginRequestDto request) in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\BLL\Services\Implements\UsuarioService.cs:line 91
+   at DiscograficaWebApi.Controllers.UsuariosController.Login(UsuarioLoginRequestDto usuarioLoginRequestDto) in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\Controllers\UsuariosController.cs:line 47
+2024-06-11 04:18:20.605 -03:00 [ERR] Error, la discografica con el nombre: string ya existe
+2024-06-11 04:18:20.625 -03:00 [ERR] Error al crear discografica
+2024-06-11 04:18:20.651 -03:00 [ERR] Error al crear la discográfica
+System.Exception: La discografica ya existe
+   at DiscograficaWebApi.BLL.Services.Implements.DiscograficaService.Create(DiscograficaCreateRequestDto request) in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\BLL\Services\Implements\DiscograficaService.cs:line 51
+   at DiscograficaWebApi.Controllers.DiscograficasController.Create(DiscograficaCreateRequestDto request) in E:\1 Programacion\ISTEA\Desarrollo de software\2Do Año\Aplicaciones Web Servidor\Parcial2-Ezequiel-Bosco\DiscograficaWebApi\DiscograficaWebApi\Controllers\DiscograficasController.cs:line 28
