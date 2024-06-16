@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using DiscograficaWebApi.DAL.Models.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace DiscograficaWebApi.DAL.Models;
 
@@ -12,6 +13,7 @@ public abstract class Persona : EntidadBase
     [Phone]
     [MaxLength(15)]
     public string? Telefono { get; set; }
+    public Nacionalidad? Nacionalidad { get; set; }
     [Required]
     public DateTime FechaNacimiento { get; set; }
 }

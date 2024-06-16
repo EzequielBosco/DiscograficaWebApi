@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using DiscograficaWebApi.DAL.Models.Enums;
 
 namespace DiscograficaWebApi.DAL.Models;
 
@@ -16,6 +17,7 @@ public class Cancion : EntidadBase
     public long? DiscoId { get; set; }
     public Disco? Disco { get; set; }
 
+    [Required]
     [ForeignKey(nameof(Artista))]
     public long ArtistaId { get; set; }
     public Artista Artista { get; set; }

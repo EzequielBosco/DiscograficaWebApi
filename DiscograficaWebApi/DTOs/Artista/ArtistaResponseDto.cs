@@ -1,4 +1,4 @@
-﻿using DiscograficaWebApi.DAL.Models;
+﻿using DiscograficaWebApi.DAL.Models.Enums;
 using DiscograficaWebApi.DTOs.Cancion;
 using DiscograficaWebApi.DTOs.Disco;
 using DiscograficaWebApi.DTOs.Discografica;

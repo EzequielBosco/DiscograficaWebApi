@@ -1,5 +1,6 @@
 ﻿using DiscograficaWebApi.DAL.Data;
 using DiscograficaWebApi.DAL.Models;
+using DiscograficaWebApi.DAL.Models.Enums;
 using DiscograficaWebApi.DTOs.Disco;
 using Microsoft.EntityFrameworkCore;
 

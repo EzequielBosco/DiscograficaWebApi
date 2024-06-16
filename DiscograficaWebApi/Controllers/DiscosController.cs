@@ -1,9 +1,6 @@
-﻿using Azure.Core;
-using DiscograficaWebApi.BLL.Services;
-using DiscograficaWebApi.DAL.Models;
+﻿using DiscograficaWebApi.BLL.Services;
 using DiscograficaWebApi.DTOs.Disco;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DiscograficaWebApi.Controllers
@@ -114,7 +111,7 @@ namespace DiscograficaWebApi.Controllers
         }
 
         [HttpGet("GetByFilter")]
-        public async Task<ActionResult<DiscoFilterResponseDto>> GetByFilter([FromQuery] DiscoFilterRequestDto request)
+        public async Task<ActionResult<List<DiscoFilterResponseDto>>> GetByFilter([FromQuery] DiscoFilterRequestDto request)
         {
             try
             {

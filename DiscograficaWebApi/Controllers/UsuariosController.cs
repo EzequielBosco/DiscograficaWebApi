@@ -1,7 +1,6 @@
 ﻿using DiscograficaWebApi.BLL.Services;
 using DiscograficaWebApi.DTOs.Usuario;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DiscograficaWebApi.Controllers
@@ -45,6 +44,10 @@ namespace DiscograficaWebApi.Controllers
                 _logger.LogInformation("LoginUsuario");
 
                 var usuario = await _usuarioService.Login(usuarioLoginRequestDto);
+                if (usuario == null)
+                {
+                    return Unauthorized(new { message = "Usuario o contraseña incorrecta" });
+                }
 
                 return Ok(usuario);
             }

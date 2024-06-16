@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using DiscograficaWebApi.DAL.Models.Enums;
 
 namespace DiscograficaWebApi.DAL.Models;
 

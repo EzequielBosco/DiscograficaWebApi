@@ -43,7 +43,7 @@ public class DiscograficaService : IDiscograficaService
 
             var discograficaResponse = _mapper.Map<DiscograficaResponseDto>(discografica);
 
-            _logger.LogInformation("Se han obtenido todas las canciones correctamente");
+            _logger.LogInformation("Se creó la discografica con éxito");
             return discograficaResponse;
         } catch (Exception ex)
         {

@@ -1,4 +1,4 @@
-﻿namespace DiscograficaWebApi.DAL.Models;
+﻿namespace DiscograficaWebApi.DAL.Models.Enums;
 
 public enum Rol
 {
